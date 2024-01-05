@@ -1,3 +1,5 @@
+import Button from "src/component/Button/Button"
+
 const Home = () => {
   return (
     <main>
@@ -7,21 +9,21 @@ const Home = () => {
                 <img src="src/assets/images/illustration-sign-up-mobile.svg" alt="" className="w-full"/>
             </picture>
         </div>
-        <div className="newsletter__sign-up">
-            <h1>Stay updated!</h1>
-            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <div className="newsletter__sign-up p-5">
+            <h1 className="my-3 text-3xl font-bold">Stay updated!</h1>
+            <p className="mb-3 text-sm">Join 60,000+ product managers receiving monthly updates on:</p>
             <ul>
-                <li><img src="src/assets/images/icon-list.svg" alt="" /> Product discovery and building what matters</li>
-                <li><img src="src/assets/images/icon-list.svg" alt="" /> Measuring to ensure updates are a success</li>
-                <li><img src="src/assets/images/icon-list.svg" alt="" /> And much more!</li>
+                <li className="my-3 text-sm flex items-start"><img src="src/assets/images/icon-list.svg" alt="" className="inline mr-4 w-4" /> <span>Product discovery and building what matters</span></li>
+                <li className="my-3 text-sm flex items-start"><img src="src/assets/images/icon-list.svg" alt="" className="inline mr-4 w-4" /> <span>Measuring to ensure updates are a success</span></li>
+                <li className="my-3 text-sm flex items-start"><img src="src/assets/images/icon-list.svg" alt="" className="inline mr-4 w-4" /> <span>And much more!</span></li>
             </ul>
-            <form>
+            <form className="my-5">
                 <label htmlFor="email" className="flex justify-between">
-                    <span>Email address</span>
-                    <span>error</span>
+                    <span className="text-xs font-bold">Email address</span>
+                    <span className="invisible">error</span>
                 </label>
-                <input type="text" placeholder="email@company.com"/>
-                <button type="submit">Subscribe to monthly newsletter</button>
+                <input type="text" placeholder="email@company.com" className="border w-full p-3 rounded mb-4"/>
+                <Button>Subscribe to monthly newsletter</Button>
             </form>
         </div>
     </main>
