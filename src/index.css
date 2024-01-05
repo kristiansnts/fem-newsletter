@@ -8,6 +8,6 @@
     }
 
     #root {
-        @apply sm:flex sm:h-screen sm:items-center;
+        @apply max-[640px]:bg-white max-[640px]:h-screen sm:flex sm:h-screen sm:items-center;
     }
 }
