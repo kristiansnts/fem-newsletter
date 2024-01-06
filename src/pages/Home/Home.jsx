@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useForm } from "react-hook-form"
 import Button from "src/component/Button/Button"
+import DesktopImg from "src/assets/images/illustration-sign-up-desktop.svg"
+import MobileImg from "src/assets/images/illustration-sign-up-mobile.svg"
 
 const Home = (props) => {
 
@@ -14,8 +16,8 @@ const Home = (props) => {
         <main className="bg-white flex flex-col justify-between sm:flex sm:items-center sm:flex-row-reverse sm:w-1/2 sm:mx-auto sm:rounded-2xl">
             <div className="banner__img sm:p-5">
                 <picture>
-                    <source media="(min-width: 600px)" srcSet="src/assets/images/illustration-sign-up-desktop.svg"/>
-                    <img src="src/assets/images/illustration-sign-up-mobile.svg" alt="" className="w-full h-1/4"/>
+                    <source media="(min-width: 600px)" srcSet={DesktopImg}/>
+                    <img src={MobileImg} alt="" className="w-full h-1/4"/>
                 </picture>
             </div>
             <div className="newsletter__sign-up p-5 sm:p-10">
