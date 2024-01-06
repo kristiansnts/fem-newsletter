@@ -1,9 +1,13 @@
 /* eslint-disable react/prop-types */
+import { useForm } from "react-hook-form"
 import Button from "src/component/Button/Button"
 
 const Success = (props) => {
 
   const { handleClick } = props
+  const { handleSubmit } = useForm()
+
+  const onSubmit = () => handleClick();
 
   return (
     <>
@@ -16,7 +20,9 @@ const Success = (props) => {
                 <p className="text-sm leading-6 sm:my-5 sm:text-xs">A confirmation email has been sent to <a href="" className="text-[#242742] font-bold">ash@loremcompany.com</a>. 
                 Please open it and click the button inside to confirm your subscription.</p>
             </div>
-            <Button variant="mt-5" handleClick={handleClick}>Dismiss message</Button>
+            <form noValidate onSubmit={handleSubmit(onSubmit)} className="w-full">
+              <Button variant="mt-5" handleClick={handleClick}>Dismiss message</Button>
+            </form>
         </div>
     </>
   )

@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <>
-      {isSuccess ? <Success handleClick={handleClick}/> : <Home handleClick={handleClick}/>}
+      {isSuccess ? <Success handleClick={handleClick}/> : <Home handleClick={handleClick} />}
     </>
   )
 }
