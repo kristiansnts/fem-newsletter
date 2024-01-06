@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import Button from "src/component/Button/Button"
 import DesktopImg from "src/assets/images/illustration-sign-up-desktop.svg"
 import MobileImg from "src/assets/images/illustration-sign-up-mobile.svg"
+import iconList from "src/assets/images/icon-list.svg"
 
 const Home = (props) => {
 
@@ -24,9 +25,9 @@ const Home = (props) => {
                 <h1 className="my-3 text-3xl sm:text-5xl sm:my-5 font-bold">Stay updated!</h1>
                 <p className="mb-3 text-sm sm:my-5">Join 60,000+ product managers receiving monthly updates on:</p>
                 <ul>
-                    <li className="my-3 text-sm flex items-start"><img src="src/assets/images/icon-list.svg" alt="" className="inline mr-4 w-4" /> <span>Product discovery and building what matters</span></li>
-                    <li className="my-3 text-sm flex items-start"><img src="src/assets/images/icon-list.svg" alt="" className="inline mr-4 w-4" /> <span>Measuring to ensure updates are a success</span></li>
-                    <li className="my-3 text-sm flex items-start"><img src="src/assets/images/icon-list.svg" alt="" className="inline mr-4 w-4" /> <span>And much more!</span></li>
+                    <li className="my-3 text-sm flex items-start"><img src={iconList} alt="" className="inline mr-4 w-4" /> <span>Product discovery and building what matters</span></li>
+                    <li className="my-3 text-sm flex items-start"><img src={iconList} alt="" className="inline mr-4 w-4" /> <span>Measuring to ensure updates are a success</span></li>
+                    <li className="my-3 text-sm flex items-start"><img src={iconList} alt="" className="inline mr-4 w-4" /> <span>And much more!</span></li>
                 </ul>
                 <form className="my-5" noValidate onSubmit={handleSubmit(onSubmit)}>
                     <label htmlFor="email" className="flex justify-between mb-2">
