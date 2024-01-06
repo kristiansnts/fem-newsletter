@@ -4,7 +4,7 @@ const Button = (props) => {
     return (
         <button 
             type="submit" 
-            className={`bg-[#242742] text-white text-sm font-normal w-full p-3 rounded-lg ${variant}`}
+            className={`bg-[#242742] hover:font-bold hover:bg-gradient-to-r hover:from-[#d64567] hover:to-[#ff6257] text-white text-sm font-normal w-full p-3 rounded-lg ${variant}`}
             onClick={handleClick}
         >
         {children}

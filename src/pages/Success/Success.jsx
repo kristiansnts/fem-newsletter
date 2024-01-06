@@ -1,6 +1,10 @@
+/* eslint-disable react/prop-types */
 import Button from "src/component/Button/Button"
 
-const Success = () => {
+const Success = (props) => {
+
+  const { handleClick } = props
+
   return (
     <>
         <div 
@@ -12,7 +16,7 @@ const Success = () => {
                 <p className="text-sm leading-6 sm:my-5 sm:text-xs">A confirmation email has been sent to <a href="" className="text-[#242742] font-bold">ash@loremcompany.com</a>. 
                 Please open it and click the button inside to confirm your subscription.</p>
             </div>
-            <Button variant="mt-5">Dismiss message</Button>
+            <Button variant="mt-5" handleClick={handleClick}>Dismiss message</Button>
         </div>
     </>
   )

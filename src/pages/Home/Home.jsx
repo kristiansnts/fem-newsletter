@@ -1,10 +1,9 @@
+/* eslint-disable react/prop-types */
 import Button from "src/component/Button/Button"
 
-const Home = () => {
+const Home = (props) => {
 
-    const handleClick = () => {
-        alert("success")
-    }
+    const { handleClick } = props
 
     return (
         <main className="bg-white flex flex-col justify-between sm:flex sm:items-center sm:flex-row-reverse sm:w-1/2 sm:mx-auto sm:rounded-2xl">

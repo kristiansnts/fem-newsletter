@@ -1,11 +1,17 @@
+import { useState } from "react"
 import Home from "./pages/Home/Home"
-// import Success from "./pages/Success/Success"
+import Success from "./pages/Success/Success"
 
 const App = () => {
+  const [isSuccess, setIsSuccess] = useState(false)
+
+  const handleClick = () => {
+    setIsSuccess(!isSuccess)
+  }
+
   return (
     <>
-        <Home />
-        {/* <Success /> */}
+      {isSuccess ? <Success handleClick={handleClick}/> : <Home handleClick={handleClick}/>}
     </>
   )
 }
